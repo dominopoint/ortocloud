@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C125801B00439E67'>
+<noteinfo noteid='186' unid='0F972581B4D3CB18C125801B0043CD0D' sequence='1'>
+<created><datetime dst='true'>20160826T142034,05+02</datetime></created>
+<modified><datetime dst='true'>20160905T142029,86+02</datetime></modified>
+<revised><datetime dst='true'>20160826T142034,05+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160905T142029,85+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20160905T142029,85+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Daniele Grillo/O=grydan</name></updatedby>
+<wassignedby><name>CN=Daniele Grillo/O=grydan</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>1758</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAIAAAAAAN4GAAABAAAAAQAAAAAAAAB8
+AOgGAADeBt4GiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACA
+gwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAA
+CxMAAAsTAQCanBgAAAZSSURBVFjDY2AYBUMNMDIygmnXWFeRiMJw/cCsQG09Bz2uXf930ccBzMzM
+YHcElwXmNS5seJU7MfuGoa+B2dH/++jjACYmJhDFEljs1Vgzv+R/Rl/8B30PLef///9T16Le5fUM
+0dkhQrFlAdqSSiIsilqyyA5gDSxyakrs9f4f3uz0wchTwwVZb0FHEoNvvItAWKmzk6WvAV/bphzS
+LAf5xivEQbRuRtbU9sWlt5OrgoNAoa+gIg8PAb9cy6roFuvvwdWmT408VBxgIZBdH8vg4GEtUDoh
+uSd3Ush73yLdNh0zRb7yeaGkOSAq382rfEbI2+4V+f+rZkY/DC+0BDqClUXHRAWcFDTN5bSMXJQi
+DJwUAqRVRCRA6eL7//0M7gHWQskttj15k9x/pPRY/Pculrtk6KSovuRRJmmJXVRCSDIs36y3cIrD
+95KZdv8zuy0v2vtrqy6/nAtPDqCQADkGkjkYwQ4PyTHxiG1VfhtcL/7fs0D8gZGrZBRQKTc5yYCF
+X5BXLqJIb0LeBOPXIdk6bYLCgsIgCQlRGeaYNHfxwsZgnbw6P+3gWFsRTmYxkIMYpeSEpF1SJCa5
+54nc0HMUjQW6jw/qWLIAi6yykJy9n5KXqAS/NMi3CVkukl2LIqtnbc06M29nwbM5O3Kfdq+KOJbb
+bZHn5K8hBNIjpSggq2UqZsbKws5PieXwrA8NaqboZHup/lW+K+btS/iz8GD6/xm7o//3b/H/37PJ
+93/TKrufuRM1plu5KApDLQVHDVWypLaODpBkZ+1a6FQ/e5/b37kHfP/3bjX9X79G6X/tKoX/Tes0
+/3duMv3fsErtR2a7AiiRMPPxCpOa9Z4yxKVZ8nTN9LGcOC/RaeK8JKf26Z7W0anG/P+BpVxwpLnC
+rB2WF+YeMv0/cafG//bNUv/bNkmAMYjdvU3pf/dWhf91C+UO6hvKi/3/P5ehqNFKoXeJfeaMNZH5
+U1cFFjTPMo/1CFTjP3QzC5sDHjPk11gYLj9kf3fb+Zgv287Hflm83/ppZrmu3f//Txiyy82t5u7T
+ez1tn9z/yXuk/0/eLYWKgWJTgLh7rewDz2AFHVCOqOjRD565R+PH0mN2/xcdNf/fu17xnmewoub/
+/63Y835KgaHlgn3Gr5YeM/q/9KjR/3m7DT4l5mm6g+QS83RsJm1TfD15jyTQMimseMpeqf9da2Qf
+OvvI6YPMzK3XDu7bIP+ud6P0t75N0j9al8hdc/SU0/r//zT2aLB2kpdNK9MsSClVawTh1BKNEhtn
+OWVQYrJxlldrWiZ/qWOLJDDIsWOQXMVM2aPyCuKgcpvR1EZKziNUOsQ1UDLWNUgy1i1I2ktWQUAQ
+b7YDYk4g5oViLqgYKBHypjTKtVcsk/hTsVz8PwZeIf6/fJHEr4hcmQqoGbAcxAbEHFDMSkm2ZFbX
+F9WIa5TakDFD9E/GLJH/MJwJoqeJ/Y4olVoiJS2kRI28DwaOrlYMTh4WLAml1souIbqg0GBT1BDW
+9kqX7A6rE7sS0SLyOqJZ5FVoldgF11iJJglpQTWQLyNTnfmSayzMLD0VOF3DtMiz3MLCHEhKMec0
++4TnTbS9GlisUqGiLcMDsoCJkU1YSl7QQNNExF3DWMRNXEpAFxhToLhlsXI2EEhqMmvPm2TzPKba
+tFhWQYbTzkePNMtPXT3IIMikxBqYZxIW32L2OKpR/79Tjshjcz85y7P/UxmgJRwTGmb8/38xg3OE
+trFbvuS90FrN/8HVGh/tk2SKVTQVuM/8n0i8A47+72BwjNA3tMmQvG2cxPPfKJ73q663cKeQML8Y
+yKIb/5cwOEeZCvnnWtv6ZlnZ2wTpiv///wuSVFk5BXQ9RAoMY3nfGCZw/TdOEHhi6CVnte5/LGmh
+IKchJqvuK7BQNYTro6qLYA8PD68MLEf8/3+dwTRc2de71PS1Z5HxRy0fiUTkVhs7M6eIqpNwiVoI
+zxM1d8GJIhKCkuTUC6wiCgJqcmYiYfzCfLKI7AhpL2h4ykTqx8n/1ImR/SfrIJiLlvKZufm4RWUN
+RBwFxfnl0PSSXBOyQmmUBouSi0yUgDv7T15n5n/i1gJ5WLIerEakTpZEd4CsnXQAtz3nMw5bttfC
+ZoLJtLIIpwMEZQQlBZUFXQSUBdz4ZcDBTFcHILcJWQbC8uEDAH0hQP0yGVswAAAAAElFTkSuQmCC
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/png</text></item>
+<item name='$FileModDT' sign='true'><datetime dst='true'>20160826T142025,91+02</datetime></item>
+<item name='$ImageNames' sign='true'><text>C:\Users\Daniele\Desktop\BooBoo-Pet-Plant-sun_icon.png</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+
