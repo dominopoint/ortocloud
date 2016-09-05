@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="366" sequence="135" unid="E6C1EE31C98DDAE9C125801B00401CC0">
+<created><datetime dst="true">20160826T134016,64+02</datetime></created>
+<modified><datetime dst="true">20160905T120038,76+02</datetime></modified>
+<revised><datetime dst="true">20160905T112508,75+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160905T120038,75+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T120038,75+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Daniele Grillo/O=grydan</name></updatedby>
+<wassignedby><name>CN=Daniele Grillo/O=grydan</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+<item name="$FileNames" sign="true"><text>bmWeatherDayNight.xsp</text></item>
+
+
+<item name="$TITLE" sign="true"><text>bmWeatherDayNight.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>

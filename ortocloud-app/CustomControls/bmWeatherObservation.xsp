@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<div class="panel WeatherObservation">
+		<div class="panel-body">
+			
+			<div class="temp">
+				<xp:text escape="true" id="computedField5"
+					value="#{javascript:compositeData.temp}" styleClass="cur"
+					title="current temperature">
+				</xp:text>
+				<!-- <xp:text escape="true" id="computedField5"
+					value="#{javascript:compositeData.max_temp}" styleClass="max"
+					title="max temp">
+				</xp:text>
+				<xp:text escape="true" id="computedField6"
+					value="#{javascript:compositeData.min_temp}" styleClass="min"
+					title="min temp">
+				</xp:text> -->
+			</div>
+			<xp:image id="image1"
+				alt="#{javascript:compositeData.narrative_day}"
+				title="#{javascript:compositeData.narrative_day}"
+				styleClass="day">
+				<xp:this.url><![CDATA[#{javascript:"weather-icon"+compositeData.icon_code+".png"}]]></xp:this.url>
+			</xp:image>
+			<div class="windCont">
+				<span class="glyphicon glyphicon glyphicon-arrow-down winddir" aria-hidden="true" title="#{javascript:compositeData.wdir_card+' '+compositeData.wdir} " 
+						style="#{javascript:'-webkit-transform: rotate('+compositeData.wdir+'deg); '+'-moz-transform: rotate('+compositeData.wdir+'deg); '+'-ms-transform: rotate('+compositeData.wdir+'deg); '+' transform: rotate('+compositeData.wdir+'deg); '} 
+		   
+	    
+	"></span>
+			</div>
+		</div>
+	</div>
+			
+</xp:view>

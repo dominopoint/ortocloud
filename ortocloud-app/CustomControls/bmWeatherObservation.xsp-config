@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>bmWeatherObservation</component-type>
+    <composite-name>bmWeatherObservation</composite-name>
+    <composite-file>/bmWeatherObservation.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>temp</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>icon_code</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>pressure</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>obs_name</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>wdir</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>wdir_card</property-name>
+      <property-class>string</property-class>
+    </property>
+  </composite-component>
+</faces-config>

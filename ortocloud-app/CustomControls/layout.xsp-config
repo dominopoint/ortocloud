@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>layout</component-type>
+    <composite-name>layout</composite-name>
+    <composite-file>/layout.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&#xd;
+	xmlns:xc="http://www.ibm.com/xsp/custom"&gt;&#xd;
+&#xd;
+	&lt;table style="width:100%; border:1px solid #ccc; border-collapse:collapse; background:#eee;" border="0" cellpadding="0" cellspacing="4"&gt;&#xd;
+	&lt;tr &gt;&#xd;
+		&lt;td style=" border:1px solid #ccc; xbackground:#fff;"&gt;&#xd;
+			&lt;xp:callback facetName="facetNavBarBrand"/&gt;&#xd;
+		&lt;/td&gt;&#xd;
+		&lt;td style=" border:1px solid #ccc; xbackground:#fff;"&gt;&#xd;
+			&lt;xp:callback facetName="facetNavBar"/&gt;&#xd;
+		&lt;/td&gt;&#xd;
+		&lt;td  style=" border:1px solid #ccc; xbackground:#fff;"&gt;	&#xd;
+			&lt;xp:callback facetName="facetNavBarMiddle"/&gt;&#xd;
+		&lt;/td&gt;&#xd;
+		&lt;td  style=" border:1px solid #ccc; xbackground:#fff;"&gt;&#xd;
+			&lt;xp:callback facetName="facetNavBarRight"/&gt;&#xd;
+		&lt;/td&gt;&#xd;
+	&lt;/tr&gt;&#xd;
+	&lt;tr&gt;&#xd;
+		&lt;td colspan="4"  style=" border:1px solid #ccc; background:#fff;"&gt;&#xd;
+			&lt;xp:callback facetName="facetMiddle" id="callback1"/&gt;&#xd;
+		&#xd;
+		&lt;/td&gt;&#xd;
+	&lt;/tr&gt;&#xd;
+	&lt;/table&gt;&#xd;
+&#xd;
+&lt;/xp:view&gt;&#xd;
+</render-markup>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>data</property-name>
+      <property-class>java.util.Collection</property-class>
+      <property-extension>
+        <property-item-class>com.ibm.xsp.model.DataSource</property-item-class>
+        <collection-property>true</collection-property>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.ComplexPropertyEditor</editor>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>hideSidebar</property-name>
+      <property-class>boolean</property-class>
+      <description>set true to hide sidebar</description>
+    </property>
+  </composite-component>
+</faces-config>

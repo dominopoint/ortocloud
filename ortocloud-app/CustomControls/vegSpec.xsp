@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:script src="/jsonvegetables.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<div class="seeded #{javascript:compositeData.name}" title="#{javascript:compositeData.description}"
+		style="background-image:url(#{javascript:compositeData.image});">
+		<!-- <xp:image url="#{javascript:compositeData.image}" id="image1"></xp:image> -->
+		<span Class="lead">
+			<xp:text escape="true" id="computedField1"
+				value="#{javascript:compositeData.name}" />
+
+			<xc:rating score="#{javascript:compositeData.score}"></xc:rating>
+		</span>
+		<!-- <p>
+			<xp:text escape="true" id="computedField2"
+				value="#{javascript:compositeData.description}">
+			</xp:text>
+		</p> -->
+		<div class="info">
+			<div class="row temp">
+			  <div class="col-sm-4 label">temperature</div>
+			  <div class="col-sm-4 min">min&#160;<xp:text escape="true" value="#{javascript:compositeData.tempMin}" /></div>
+			  <div class="col-sm-4 max">max&#160;<xp:text escape="true" value="#{javascript:compositeData.tempMax}"/></div>
+			</div>
+			<div class="row harvest">
+			  <div class="col-sm-4 label">harvest</div>
+			  <div class="col-sm-4 max">
+ from&#160;
+ <xp:text escape="true">
+ 	<xp:this.value><![CDATA[#{javascript:@Adjust(compositeData.seed_date,0,0,compositeData.harvestMin,0,0,0,'[InLocalTime]');}]]></xp:this.value>
+ </xp:text></div>
+			  <div class="col-sm-4 max">
+ to&#160;
+ <xp:text escape="true">
+ 	<xp:this.value><![CDATA[#{javascript:@Adjust(compositeData.seed_date,0,0,compositeData.harvestMax,0,0,0,'[InLocalTime]');}]]></xp:this.value>
+ </xp:text></div>
+			</div>
+			<!-- <xp:text escape="true" id="computedField2"
+				value="#{javascript:compositeData.seed_date}">
+				<xp:this.converter>
+					<xp:convertDateTime type="date" dateStyle="full"></xp:convertDateTime>
+				</xp:this.converter>
+			</xp:text>
+			 date:<xp:text escape="true" id="computedField3"
+				value="#{javascript:compositeData.seed_date+'  '+compositeData.harvestMin}"
+				styleClass="seedDate">
+				<xp:this.converter>
+					<xp:convertDateTime type="date" dateStyle="medium"></xp:convertDateTime>
+				</xp:this.converter>
+			</xp:text> -->
+			
+			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+			
+			</div><!-- /div.info  -->
+		</div>
+</xp:view>

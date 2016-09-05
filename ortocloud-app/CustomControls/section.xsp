@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:div styleClass="#{javascript:'panel panel-default section '+compositeData.styleClass}">
+		<xp:div styleClass="panel-heading"
+			rendered="#{javascript:return (compositeData.title!='');}">
+			<xp:text escape="true" id="computedField1"
+				value="#{javascript:compositeData.title}" />
+		</xp:div>
+
+		<div class="panel-body">
+			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+		</div>	
+
+	</xp:div>
+</xp:view>
+	
+	

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<div class="seeded #{javascript:compositeData.name}"
+		title="#{javascript:compositeData.description}"
+		style="background-image:url(#{javascript:compositeData.image});">
+		<span Class="lead">
+			<xp:text escape="true" id="computedField1"
+				value="#{javascript:compositeData.name}" />
+
+			<xc:rating score="#{javascript:compositeData.score}"></xc:rating>
+		</span>
+		<div class="">
+			<!-- <xp:div   styleClass="warning hot">
+				<i class="glyphicon glyphicon-warning-sign" />
+				<i class="glyphicon glyphicon glyphicon-fire" />
+				too hot!
+				<xp:this.loaded><![CDATA[${javascript:parseInt(sessionScope.currentObservation.observation.temp)>compositeData.tempMax}]]></xp:this.loaded>
+				</xp:div>
+				<xp:div  styleClass="warning cold" >
+				<i class="glyphicon glyphicon-warning-sign" />
+				<i class="glyphicon glyphicon glyphicon glyphicon-ice-lolly" />
+				too cold!
+				<xp:this.loaded><![CDATA[${javascript:parseInt(sessionScope.currentObservation.observation.temp)<compositeData.tempMin}]]></xp:this.loaded>
+				</xp:div> -->
+			<xp:text escape="false">
+				<xp:this.value><![CDATA[#{javascript:try {
+var t=sessionScope.currentObservation.observation.temp
+if ( parseInt(t)>parseInt(compositeData.tempMax) ) {
+		return "<div class='warning hot'><i class='glyphicon glyphicon-warning-sign'></i><i class='glyphicon glyphicon glyphicon-fire'></i>too hot!</div>"
+	}
+if ( parseInt(t)<parseInt(compositeData.tempMin) ) {
+		return "<div class='warning cold'><i class='glyphicon glyphicon-ice-lolly'></i><i class='glyphicon glyphicon glyphicon-fire'></i>too cold!</div>"
+	}
+
+}catch(e){
+_dump('vegSeeded error '+e)
+}}]]></xp:this.value>
+			</xp:text>
+		</div>
+		<div class="info">
+			<div class="row seedDate">
+				<div class="col-sm-4 label">seeded</div>
+				<div class="col-sm-8 seed">
+					<xp:text escape="true">
+						<xp:this.value><![CDATA[#{javascript:try {
+	return compositeData.seed_date
+	}
+catch(e)
+	{
+		//_dump(compositeData.seed_date)
+		_dump('vegSeeded error '+e)
+		
+	}}]]></xp:this.value>
+					</xp:text>
+				</div>
+
+			</div>
+
+			<div class="row temp">
+				<div class="col-sm-4 label">temperature</div>
+				<div class="col-sm-4 min">
+					min&#160;
+					<xp:text escape="true"
+						value="#{javascript:compositeData.tempMin}" />
+				</div>
+				<div class="col-sm-4 max">
+					max&#160;
+					<xp:text escape="true"
+						value="#{javascript:compositeData.tempMax}" />
+				</div>
+			</div>
+
+			<div class="row harvest">
+				<div class="col-sm-4 label">harvest</div>
+				<div class="col-sm-4 max">
+					from&#160;
+					<xp:text escape="true">
+						<xp:this.value><![CDATA[#{javascript:try {
+	@Adjust(compositeData.seed_date,0,0,compositeData.harvestMin,0,0,0,'[InLocalTime]');
+	}
+catch(e)
+	{
+		//_dump(compositeData.seed_date)
+		_dump('vegSeeded error '+e)
+		
+	}}]]></xp:this.value>
+					</xp:text>
+				</div>
+				<div class="col-sm-4 max">
+					to&#160;
+					<xp:text escape="true">
+						<xp:this.value><![CDATA[#{javascript:try
+{ @Adjust(compositeData.seed_date,0,0,compositeData.harvestMax,0,0,0,'[InLocalTime]');
+}
+catch(e)
+{
+		//_dump(compositeData.seed_date)
+		_dump('vegSeeded error '+e)
+}}]]></xp:this.value>
+					</xp:text>
+				</div>
+			</div>
+			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+		</div><!-- /div.info  -->
+
+
+
+
+	</div>
+</xp:view>

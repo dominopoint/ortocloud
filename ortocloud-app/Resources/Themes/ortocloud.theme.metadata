@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3fe" sequence="29" unid="50B04A02BC4A9D0DC12580240046B7F5">
+<created><datetime dst="true">20160904T145226,13+02</datetime></created>
+<modified><datetime dst="true">20160905T120041,85+02</datetime></modified>
+<revised><datetime dst="true">20160904T161500,23+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160905T120041,84+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T120041,84+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Giuseppe Grasso/O=grydan</name></updatedby>
+<wassignedby><name>CN=Giuseppe Grasso/O=grydan</name></wassignedby>
+<item name="$TITLE"><text>ortocloud.theme</text></item>
+<item name="$Flags"><text>34567Cg~`</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ortocloud.theme</text></item>
+<item name="$CSSFiles"><textlist><text>/.ibmxspres/.extlib/responsive/xpages/css/xsp-core.css</text><text>/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/css/bootstrap.min.css</text><text>/.ibmxspres/.extlib/responsive/xpages/css/xsp-mixin.css</text><text>/.ibmxspres/.extlib/responsive/xpages/css/xsp-ie11.css</text><text>custom.css</text></textlist></item></note>

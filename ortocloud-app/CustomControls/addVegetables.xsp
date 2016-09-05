@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<div class="modal modal-transparent fade addCrops"
+		id="modal-transparent" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close"
+						data-dismiss="modal">
+						<i class="glyphicon glyphicon-remove"></i>
+						<span aria-hidden="true"></span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						Add Vegetables
+					</h4>
+				</div>
+				<div class="modal-body">
+					<xc:section title="perfect crops for your garden"
+						styleClass="mygarden">
+						<xp:this.facets>
+							<xp:repeat id="repeat1" rows="30" var="veg"
+								xp:key="facet_1" first="0">
+								<xp:this.value><![CDATA[#{javascript: //return biolist;
+function bioCompareDesc(a,b) {
+  if (a.score > b.score)
+    return -1;
+  if (a.score < b.score)
+    return 1;
+  return 0;
+}
+var b=vegScoreAsObject( getCurrentLatAsString(), getCurrentLonAsString() );
+if (b!=undefined){
+return b.biolist.sort(bioCompareDesc)} else {
+return []
+}     }]]></xp:this.value>
+								<xp:panel>
+									<xp:this.rendered><![CDATA[#{javascript:parseInt(veg.score)==100}]]></xp:this.rendered>
+									<xc:vegSpec
+										description="#{javascript:veg.description}"
+										name="#{javascript:veg.name}" image="#{javascript:veg.image}"
+										seed_date="#{javascript:new Date();}"
+										tempMax="#{javascript:veg.tempMax}"
+										tempMin="#{javascript:veg.tempMin}"
+										harvestMax="#{javascript:veg.harvestMax}"
+										harvestMin="#{javascript:veg.harvestMin}"
+										score="#{javascript:veg.score}">
+										<xp:this.facets>
+											<xp:button id="button1"
+												value="Add to my Garden" xp:key="facet_1"
+												styleClass="btn btn-primary btn-lg btn-block"
+												title="click to add this vegetable to your garden">
+												<xp:this.attrs>
+													<xp:attr
+														name="data-dismiss" value="modal">
+													</xp:attr>
+												</xp:this.attrs>
+
+												<i
+													class="glyphicon glyphicon-ok" aria-hidden="true">
+												</i>
+												<xp:eventHandler
+													event="onclick" submit="true" refreshMode="partial"
+													immediate="true" refreshId="sectionGarden">
+													<xp:this.script><![CDATA[$('#myPleaseWait').modal('show');
+console.log("click")
+
+//a=confirm("do you want to add this vegetables to your garden?")]]></xp:this.script>
+													<xp:this.action>
+														<xp:actionGroup>
+															<xp:actionGroup>
+																<xp:executeScript
+																	script="#{javascript:addVegetablesMyGarden(veg,document1)}">
+																</xp:executeScript>
+																<xp:saveDocument
+																	var="document1">
+																</xp:saveDocument>
+
+																<xp:executeScript>
+																	<xp:this.script><![CDATA[#{javascript:if (context.getUrlParameter("unid")==""){
+
+	context.redirectToPage('/main.xsp?open&unid='+document1.getDocument().getUniversalID()+'#myGarden')
+}}]]></xp:this.script>
+																</xp:executeScript>
+															</xp:actionGroup>
+														</xp:actionGroup>
+													</xp:this.action>
+													<xp:this.onError><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onError>
+													<xp:this.onStart><![CDATA[$('#myPleaseWait').modal('show');
+console.log("start event")]]></xp:this.onStart>
+													<xp:this.onComplete><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onComplete>
+												</xp:eventHandler>
+											</xp:button>
+										</xp:this.facets>
+									</xc:vegSpec>
+								</xp:panel>
+							</xp:repeat>
+						</xp:this.facets>
+					</xc:section>
+					<xc:section title="good crops for your garden"
+						styleClass="mygarden">
+						<xp:this.facets>
+							<xp:repeat id="repeat2" rows="30" var="veg"
+								xp:key="facet_1" first="0">
+								<xp:this.value><![CDATA[#{javascript: //return biolist;
+function bioCompareDesc(a,b) {
+  if (a.score > b.score)
+    return -1;
+  if (a.score < b.score)
+    return 1;
+  return 0;
+}
+var b=vegScoreAsObject( getCurrentLatAsString(), getCurrentLonAsString() );
+if (b!=undefined){
+return b.biolist.sort(bioCompareDesc)} else {
+return []
+}     }]]></xp:this.value>
+								<xp:panel>
+									<xp:this.rendered><![CDATA[#{javascript: (parseInt(veg.score)<100)&&(parseInt(veg.score)>=40)}]]></xp:this.rendered>
+									<xc:vegSpec
+										description="#{javascript:veg.description}"
+										name="#{javascript:veg.name}" image="#{javascript:veg.image}"
+										seed_date="#{javascript:new Date();}"
+										tempMax="#{javascript:veg.tempMax}"
+										tempMin="#{javascript:veg.tempMin}"
+										harvestMax="#{javascript:veg.harvestMax}"
+										harvestMin="#{javascript:veg.harvestMin}"
+										score="#{javascript:veg.score}">
+										<xp:this.facets>
+											<xp:button id="button2"
+												value="Add to my Garden" xp:key="facet_1"
+												styleClass="btn btn-primary btn-lg btn-block"
+												title="click to add this vegetable to your garden">
+												<xp:this.attrs>
+													<xp:attr
+														name="data-dismiss" value="modal">
+													</xp:attr>
+												</xp:this.attrs>
+
+												<i
+													class="glyphicon glyphicon-ok" aria-hidden="true">
+												</i>
+												<xp:eventHandler
+													event="onclick" submit="true" refreshMode="partial"
+													immediate="true" refreshId="sectionGarden">
+													<xp:this.script><![CDATA[$('#myPleaseWait').modal('show');
+console.log("click")
+
+//a=confirm("do you want to add this vegetables to your garden?")]]></xp:this.script>
+													<xp:this.action>
+														<xp:actionGroup>
+															<xp:actionGroup>
+																<xp:executeScript
+																	script="#{javascript:addVegetablesMyGarden(veg,document1)}">
+																</xp:executeScript>
+																<xp:saveDocument
+																	var="document1">
+																</xp:saveDocument>
+
+																<xp:executeScript>
+																	<xp:this.script><![CDATA[#{javascript:if (context.getUrlParameter("unid")==""){
+
+	context.redirectToPage('/main.xsp?open&unid='+document1.getDocument().getUniversalID()+'#myGarden')
+}}]]></xp:this.script>
+																</xp:executeScript>
+															</xp:actionGroup>
+														</xp:actionGroup>
+													</xp:this.action>
+													<xp:this.onError><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onError>
+													<xp:this.onStart><![CDATA[$('#myPleaseWait').modal('show');
+console.log("start event")]]></xp:this.onStart>
+													<xp:this.onComplete><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onComplete>
+												</xp:eventHandler>
+											</xp:button>
+										</xp:this.facets>
+									</xc:vegSpec>
+								</xp:panel>
+							</xp:repeat>
+						</xp:this.facets>
+					</xc:section>
+					<xc:section title="bad crops for your garden"
+						styleClass="mygarden" rendered="false">
+						<xp:this.facets>
+							<xp:repeat id="repeat3" rows="30" var="veg"
+								xp:key="facet_1" first="0">
+								<xp:this.value><![CDATA[#{javascript: //return biolist;
+function bioCompareDesc(a,b) {
+  if (a.score > b.score)
+    return -1;
+  if (a.score < b.score)
+    return 1;
+  return 0;
+}
+var b=vegScoreAsObject( getCurrentLatAsString(), getCurrentLonAsString() );
+if (b!=undefined){
+return b.biolist.sort(bioCompareDesc)} else {
+return []
+}     }]]></xp:this.value>
+								<xp:panel>
+									<xp:this.rendered><![CDATA[#{javascript: (parseInt(veg.score)<40)}]]></xp:this.rendered>
+									<xc:vegSpec
+										description="#{javascript:veg.description}"
+										name="#{javascript:veg.name}" image="#{javascript:veg.image}"
+										seed_date="#{javascript:new Date();}"
+										tempMax="#{javascript:veg.tempMax}"
+										tempMin="#{javascript:veg.tempMin}"
+										harvestMax="#{javascript:veg.harvestMax}"
+										harvestMin="#{javascript:veg.harvestMin}"
+										score="#{javascript:veg.score}">
+										<xp:this.facets>
+											<xp:button id="button3"
+												value="Add to my Garden" xp:key="facet_1"
+												styleClass="btn btn-primary btn-lg btn-block"
+												title="click to add this vegetable to your garden">
+												<xp:this.attrs>
+													<xp:attr
+														name="data-dismiss" value="modal">
+													</xp:attr>
+												</xp:this.attrs>
+
+												<i
+													class="glyphicon glyphicon-ok" aria-hidden="true">
+												</i>
+												<xp:eventHandler
+													event="onclick" submit="true" refreshMode="partial"
+													immediate="true" refreshId="sectionGarden">
+													<xp:this.script><![CDATA[$('#myPleaseWait').modal('show');
+console.log("click")
+
+//a=confirm("do you want to add this vegetables to your garden?")]]></xp:this.script>
+													<xp:this.action>
+														<xp:actionGroup>
+															<xp:actionGroup>
+																<xp:executeScript
+																	script="#{javascript:addVegetablesMyGarden(veg,document1)}">
+																</xp:executeScript>
+																<xp:saveDocument
+																	var="document1">
+																</xp:saveDocument>
+
+																<xp:executeScript>
+																	<xp:this.script><![CDATA[#{javascript:if (context.getUrlParameter("unid")==""){
+
+	context.redirectToPage('/main.xsp?open&unid='+document1.getDocument().getUniversalID()+'#myGarden')
+}}]]></xp:this.script>
+																</xp:executeScript>
+															</xp:actionGroup>
+														</xp:actionGroup>
+													</xp:this.action>
+													<xp:this.onError><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onError>
+													<xp:this.onStart><![CDATA[$('#myPleaseWait').modal('show');
+console.log("start event")]]></xp:this.onStart>
+													<xp:this.onComplete><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onComplete>
+												</xp:eventHandler>
+											</xp:button>
+										</xp:this.facets>
+									</xc:vegSpec>
+								</xp:panel>
+							</xp:repeat>
+						</xp:this.facets>
+					</xc:section>
+
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-lg"
+						data-dismiss="modal">
+						<i class="glyphicon glyphicon-remove"></i>
+						Close
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</xp:view>

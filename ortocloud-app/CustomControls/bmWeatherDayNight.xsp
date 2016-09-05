@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<div class="panel WeatherDayNight">
+		<div class="panel-body">
+		   <div class="wcnt">
+			<xp:text escape="false" styleClass="lead"
+				title="#{javascript:compositeData.dow}">
+
+				<xp:this.value><![CDATA[#{javascript:compositeData.daypart_name+' <i class="glyphicon glyphicon-info-sign" title="'+compositeData.narrative+'"></i>'}]]></xp:this.value>
+			</xp:text>
+			<!--  <xp:text escape="true" id="computedField4"
+				value="#{javascript:compositeData.narrative}" styleClass="details">
+			</xp:text>-->
+			<div class="temp">
+				<xp:text escape="true" id="computedField5"
+					value="#{javascript:compositeData.max_temp}" styleClass="max"
+					title="max temp">
+				</xp:text>
+				<xp:text escape="true" id="computedField6"
+					value="#{javascript:compositeData.min_temp}" styleClass="min"
+					title="min temp">
+				</xp:text>
+
+			</div>
+			<xp:image id="image1"
+				alt="#{javascript:compositeData.narrative_day}"
+				title="#{javascript:compositeData.narrative_day}"
+				styleClass="day">
+				<xp:this.url><![CDATA[#{javascript:"weather-icon"+compositeData.icon_code_day+".png"}]]></xp:this.url>
+			</xp:image>
+			<xp:image id="image2"
+				alt="#{javascript:compositeData.narrative_night}"
+				title="#{javascript:compositeData.narrative_night}"
+				styleClass="night">
+				<xp:this.url><![CDATA[#{javascript:"weather-icon"+compositeData.icon_code_night+".png"}]]></xp:this.url>
+			</xp:image>
+			<!-- <xp:text escape="true" id="computedField2"
+  				value="#{javascript:'narrativa='+compositeData.narrative+' '+compositeData.narrative_day+' '+compositeData.narrative_night}" rendererType="h3">
+  			</xp:text>
+			<xp:text escape="true" id="computedField3"><xp:this.value><![CDATA[#{javascript:"cippa lippa "+compositeData.dow+compositeData.narrative}]]></xp:this.value></xp:text>
+			 -->
+			 </div>
+		</div>
+	</div>
+
+</xp:view>

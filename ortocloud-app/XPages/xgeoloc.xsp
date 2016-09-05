@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XPage which is not rendered but returns data like XML, JSON, etc.     -->
+<!-- More: http://www.wissel.net/blog/d6plinks/shwl-7mgfbn                 -->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
+	<xp:this.afterRenderResponse><![CDATA[#{javascript:
+
+var externalContext = facesContext.getExternalContext();
+var writer = facesContext.getResponseWriter();
+var response = externalContext.getResponse();
+  
+// set content type, e.g. ...
+response.setContentType("text/json");
+// response.setContentType("application/json"); 
+ 
+response.setHeader("Cache-Control", "no-cache");
+  
+// read parameters, e.g. ...
+
+var lat = context.getUrlParameter("lat");
+var lon = context.getUrlParameter("lon");
+sessionScope.geoPos={"lat":lat,"lon":lon}
+
+var result="{result:\"ok\"}"
+
+ 
+writer.write(result);
+// writer.write("{'jsonvar'='jsonvalue'}"); 
+ 
+writer.endDocument();
+}]]>
+	</xp:this.afterRenderResponse>
+	<xp:this.resources>
+		<xp:script src="/jsonvegetables.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+</xp:view>

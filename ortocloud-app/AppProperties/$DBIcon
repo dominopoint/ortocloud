@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1258025002D9225'>
+<noteinfo noteid='202' unid='984510830F9D31DCC1258018003FE47C' sequence='1'>
+<created><datetime dst='true'>20160823T133752,60+02</datetime></created>
+<modified><datetime dst='true'>20160905T122223,61+02</datetime></modified>
+<revised><datetime dst='true'>20160823T133752,61+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160905T122223,60+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20160905T122223,60+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Daniele Grillo/O=grydan</name></updatedby>
+<wassignedby><name>CN=Daniele Grillo/O=grydan</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>953</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAIAAAAAALkDAAABAAAAAQAAAAAAAAB8
+AMMDAAC5A7oDiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADgElEQVRYhcXXXYhV
+VRQH8N9cho34ICIiImL7wYcoMJHMtJIzZRqBRYQEEgU9FBE9mEVEhA9CiCFRL0roSxFJUEbkg2J5
+KvUhBCvEQhQ2YpIyxVA2yEGGHva+43W+nOvX/OFy2Weds9Z/rb3WXmtzE5CqMDNV4WCqwvpuv21N
+QvmcVIWJ5PBJWX7eLYHeSbwzB5tSFbbjAvpj3Qx1yJ/D47g71s3lbgn0XOuFVIUWjmFReXQJNTYg
+4TROxLp5NFVhOubiIvoxhPmxbs6Op3/cLUhVCKkKqzEb6/BrEU3DYziMTZiHH1MVtuF8IXQe/+Ff
+PDuRg6MiULx4Da/K4d8a6+bNEon7ym8pVhVvYRDTx9D/VSG/GA9jR6ybf8YlkKqwCF9g4QhFb8e6
+eTdVYQXex71y9IbK/wBmlvXv+Aw/4QBWyEka8SdeinXz9SgCqQqLcbAo6sQRrMVd2Nfh6WUcxf3Y
+jQcxv8j+xjOFzC6s7tA3VEjsVNhLVZiBPSOM9+MN9Mmh3uPqMG+VE1Lxsg+nynoW9mJlrJs1eABb
+iqyF7akK9w8TwMYSojY+wh34EC/KCTe7w/MteKeD0AK5pJdiRyEW8Gmqwi55O0536O/FB6kKelIV
+Av7oMEAO3fJYNwOpCgtQyQk5gAOxblKJ3D5Xwvt0rJsvy/OZ8pZdkqsn4Bejc2tZr5yds0cI7sTh
+VIWX8UOsm4/bglSFVknGI/i2g8C0It8lJ127bCtsHsM4PNmTqvAeXh9D2MYp/Fy8nyUn3Twsw0n8
+JufIGuyX63+skhwL+3vlGp0IC8dh/0qsm+dTFdbKCXe8EJmscYgtVydfN1ifqrAk1s1RuQ+cw8ou
+dcxqYcZ1EujF3lSFKtZNfzkpN3Spo9WTqvCXvLc3ggPycfxEl9+d65VPphvFquv87kL7HJ8qpJYr
+9ToVONaSG9BU4VBL7tk3Iw+6xQAOtcq49M0UENgd66Zpd8PNbm8ULsuDTW7H5TTbeRsJ7Ix1c3KY
+QMFGuQ3faiS81V4ME4h1c1EevS7cQuODWBfrZvjsuWosj3VzCo/g3C0y/lTZ7mGMuhfEujmO5fIY
+dbNwBn2xbvaPFIx5MYl1cwYPyXPf4A0YHpKT+55YN2M6NJmr2Vy5zb5g9Og2Hi7KF9VtsW5OTPTi
+NQl0EOmV57s+LJEn4fb0M4izcl/5Ht/FuplU5P4HiCQN36xHpjIAAAAASUVORK5CYIIA
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/png</text></item>
+<item name='$FileModDT' sign='true'><datetime dst='true'>20160823T133740,61+02</datetime></item>
+<item name='$ImageNames' sign='true'><text>C:\Users\Daniele\Downloads\tomato-32.png</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

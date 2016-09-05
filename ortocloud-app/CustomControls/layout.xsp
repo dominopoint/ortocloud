@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom" pageIcon="/favicon.ico"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:this.properties>
+		<xp:parameter name="xsp.resources.aggregate" value="true" />
+	</xp:this.properties>
+	<xp:this.resources>
+		<xp:headTag tagName="link">
+			<!-- 	<xp:this.attributes>
+				<xp:parameter name="rel" value="shortcut icon" />
+				<xp:parameter name="href"
+				value="${javascript:context.getUrl().getAddress().replace(view.getPageName(), '')}/favicon.ico" />
+				</xp:this.attributes> -->
+			<xp:this.attributes>
+				<xp:parameter name="rel" value="shortcut icon" />
+				<xp:parameter name="href"
+					value="${javascript:'//'+context.getUrl().getAddress().replace(view.getPageName(), '').split('://')[1]}/favicon.ico" />
+			</xp:this.attributes>
+		</xp:headTag>
+
+	</xp:this.resources>
+
+
+	<!-- <xc:enforceXPagesOnServer></xc:enforceXPagesOnServer>  -->
+	<xp:this.beforePageLoad><![CDATA[#{javascript:var ua= context.getUserAgent().getUserAgent().toLowerCase();;
+ var fam='';
+if ( (ua.indexOf('iphone') > -1)||(ua.indexOf('ipad') > -1) ) { fam='ios'} else
+if ( (ua.indexOf('android') > -1) ) { fam='android'} else
+if ( (ua.indexOf('windows') > -1) ) { fam='windows'} else 
+ { fam='unknown'}
+ 
+
+view.setStyleClass([@ClientType(),context.getUserAgent().getBrowser(),fam].join(' ') );}]]></xp:this.beforePageLoad>
+	<!-- <li class="dropdown-header">
+
+		<i class="glyphicon glyphicon-user"></i>
+
+		<xp:text escape="false" disableTheme="false">
+			<xp:this.value><![CDATA[#{javascript:' '+@Name("[ABBREVIATE]",@UserName()+' '+@ClientType())+' v.'+context.getUserAgent().getBrowserVersionNumber()}]]></xp:this.value>
+		</xp:text>
+
+
+	</li> -->
+	<xp:div
+		styleClass="navbar applayout-banner navbar-inverse navbar-fixed-top">
+		<xp:this.attrs>
+			<xp:attr name="role" value="navigation"></xp:attr>
+		</xp:this.attrs>
+		<div class="applayout-banner-container container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle"
+					data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a
+					href="#{javascript:return '//'+context.getUrl().getAddress().replace(view.getPageName(), '').split('://')[1]+'/main.xsp'}">
+					<span class="navbar-brand">
+						<xp:callback facetName="facetNavBarBrand"
+							disableTheme="false">
+						</xp:callback>
+					</span>
+				</a>
+
+
+			</div>
+
+			<div class="navbar-collapse collapse">
+
+				<!-- <xc:bookmarks></xc:bookmarks>  -->
+				<!-- <ul class="nav navbar-nav"> -->
+				<xp:callback facetName="facetNavBar"
+					disableTheme="false">
+				</xp:callback>
+				<!-- 
+					<ul class="nav navbar-nav applayout-links">
+					<li class="menu-item">
+					<xp:link text="Activities"
+					value="vActivities.xsp">
+					</xp:link>
+					</li>
+					</ul> -->
+				<xp:callback facetName="facetNavBarMiddle">
+				</xp:callback>
+				<!-- </ul>  -->
+				<ul class="nav navbar-nav navbar-right">
+					<xp:callback facetName="facetNavBarRight">
+					</xp:callback>
+					
+					<li class="dropdown menu-item">
+						<a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">
+							<i class='glyphicon glyphicon-cog'></i>
+							&#160;
+							<span
+								class="visible-lg-inline visible-in-inline">
+								<xp:text escape="false"
+									disableTheme="false">
+									
+								<xp:this.value><![CDATA[#{javascript:"Options"}]]></xp:this.value></xp:text>
+							</span>
+							<span class="caret"></span>
+						</a>
+
+
+						<ul class="dropdown-menu " role="menu"
+							aria-labelledby="dropdownMenu1">
+							
+							<li class="divider"></li>
+
+							<li>
+								<xp:link text=" set Genoa Italy"
+									id="link6" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"44.4164994",lon:"8.9389484"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Milano Italy"
+									id="link7" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"45.465422",lon:"9.185924"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set New York USA"
+									id="link8" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"40.7828647",lon:"-73.9653551"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Bay Lake, FL USA"
+									id="link9" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"28.3685149",lon:"-81.5572454"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link
+									text=" set San Francisco, CA, USA" id="link10"
+									escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"37.7576792",lon:"-122.5078118"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set London, UK"
+									id="link11" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"51.52",lon:"-0.17"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Mosca, Russian"
+									id="link12" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"55.755826",lon:"37.6173000"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Shangai, China"
+									id="link1" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"31.230416",lon:"121.473701"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Melbourne, Australia"
+									id="link2" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"-37.813628",lon:"144.963058"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Toronto, Canada"
+									id="link5" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"43.653226",lon:"-79.383184"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set Johannesburg, Sud africa"
+									id="link3" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"-26.204103",lon:"28.047305"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link text=" set New Delhi, India"
+									id="link4" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="true" refreshMode="complete">
+										<xp:this.action><![CDATA[#{javascript:sessionScope.geoPos={lat:"28.661898",lon:"77.227396"}; 
+viewScope.meteook=false;
+viewScope.vegs=null;
+context.reloadPage();}]]></xp:this.action>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+<li>
+								<xp:link text=" set my Location, Geolocation"
+									id="link13" escape="true">
+									<i
+										class='glyphicon glyphicon-globe' />
+									<xp:eventHandler event="onclick"
+										submit="false">
+
+										<xp:this.script><![CDATA[var host= "#{javascript:context.getUrl().toString().split(facesContext.getExternalContext().getRequest().getRequestURI())[0]}"
+var pathdb="#{javascript:session.getCurrentDatabase().getFilePath()}";
+var pathreplace=pathdb.replace("\\/g", "/");
+ var l=getGeoLocationXAgent(host+"/"+pathreplace);
+  ]]></xp:this.script>
+									</xp:eventHandler>
+								</xp:link>
+							</li>
+
+						
+						</ul>
+					</li>
+				</ul>
+				<!-- 
+					<ul class="nav navbar-nav navbar-right">
+					
+					</ul>
+				-->
+			</div>
+		</div>
+	</xp:div>
+
+	<xp:div styleClass="container-fluid">
+		<!-- -->
+		<div class="row row-offcanvas row-offcanvas-left"><!-- http://www.bootstrapzero.com/bootstrap-template/dashboard-sidebar  -->
+
+			<!-- <xc:menuSinistra
+				rendered="#{javascript:!compositeData.hideSidebar}">
+				</xc:menuSinistra>  -->
+			<xp:div
+				styleClass="#{javascript:compositeData.hideSidebar?'col-sm-12 main':'col-sm-9 col-md-10 main'}">
+				<!-- callback for main content -->
+				<xp:callback facetName="facetMiddle" id="callback1">
+				</xp:callback>
+			</xp:div>
+		</div><!-- /row -->
+	</xp:div>
+	<div id="indicator"></div>
+	<!-- <xc:navHistory></xc:navHistory> -->
+	<xc:ccDebugToolbar defaultCollapsed="false" collapseTo="left"
+		loaded="${javascript:isDebug()}">
+	</xc:ccDebugToolbar>
+	<!-- <xp:scriptBlock value="WaitingIndicator()"></xp:scriptBlock> -->
+	</xp:view>

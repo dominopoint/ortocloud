@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>bmWeatherDayNight</component-type>
+    <composite-name>bmWeatherDayNight</composite-name>
+    <composite-file>/bmWeatherDayNight.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>icon_code_day</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>narrative</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>max_temp</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>min_temp</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>icon_code_night</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>narrative_day</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>narrative_night</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>daypart_name</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>dow</property-name>
+      <property-class>string</property-class>
+      <display-name>day of week</display-name>
+    </property>
+  </composite-component>
+</faces-config>

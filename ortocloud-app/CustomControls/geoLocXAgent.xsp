@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+<xp:this.resources>
+		<xp:script src="/geoloc.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	
+	<xp:scriptBlock id="scriptBlock1">
+
+		<xp:this.value><![CDATA[dojo.ready(function(){
+   var host= "#{javascript:context.getUrl().toString().split(facesContext.getExternalContext().getRequest().getRequestURI())[0]}"
+   var pathdb="#{javascript:session.getCurrentDatabase().getFilePath()}";
+   var pathreplace=pathdb.replace("\\/g", "/");
+  // var geoPos="#{javascript:toJson(sessionScope.geoPos)}";
+    var geoPos="#{javascript:sessionScope.geoPos}"
+   if (geoPos==""||geoPos=="null"){
+      $('#myPleaseWait').modal('show');
+      var l=getGeoLocationXAgent(host+"/"+pathreplace);
+   } 
+})]]></xp:this.value>
+	</xp:scriptBlock></xp:view>

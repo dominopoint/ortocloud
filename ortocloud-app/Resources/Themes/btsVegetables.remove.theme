@@ -1,0 +1,135 @@
+<!--
+	The default theme contents use theme inheritance.
+
+	Application themes can extend an existing global theme using the
+	extends attribute.  Existing themes include the following options:
+
+	1. webstandard 2. oneui 3. notes
+-->
+<!--  <theme extends="webstandard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+	--><!-- 
+		Use this pattern to include resources (such as style sheets
+		and JavaScript files that are used by this theme.
+	-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+   
+    <resources>
+        <metaData>
+            <name>viewport</name>
+            <content>width=device-width, initial-scale=1.0</content>
+        </metaData>
+    </resources>
+    <resources>
+        <metaData>
+            <name>charset</name>
+            <content>UTF-8</content>
+        </metaData>
+    </resources>
+     <resources>
+        <metaData>
+            <httpEquiv>X-UA-Compatible</httpEquiv>
+            <content>IE=edge</content>
+        </metaData>
+    </resources>
+    <!-- resources css for themes online  Vegetable Far -->
+	<resource>
+		<content-type>text/css</content-type>
+		<href>web/css/bootstrap.min.css</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>style.css</href>
+	</resource>
+    <resource>
+		<content-type>text/css</content-type>
+		<href>web/css/font-awesome.min.css</href>
+	</resource> 
+      <resource>
+		<content-type>text/css</content-type>
+		<href>web/css/typo.css</href>
+	</resource> 
+	<resource>
+		<content-type>text/css</content-type>
+		<href>web/css/hoverex-all.css</href>
+	</resource> 
+    <resource>
+		<content-type>text/css</content-type>
+		<href>web/css/inner.css</href>
+	</resource> 
+	<resource>
+		<content-type>text/css</content-type>
+		<href>web/css/caption-hover.css</href>
+	</resource> 
+	<resource>
+		<content-type>text/css</content-type>
+		<href>web/css/circle-hover.css</href>
+	</resource> 
+	<resource>
+		<content-type>text/css</content-type>
+		<href>web/css/slider.css</href>
+	</resource> 
+	<!-- end resources css -->
+	
+	 <resource>
+		<content-type>text/css</content-type>
+		<href>https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900</href>
+	</resource>
+	 <resource>
+	<content-type>text/css</content-type>
+		<href>https://fonts.googleapis.com/css?family=Poiret+One</href>
+	</resource>
+	  
+    <resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/SmoothScroll.min.js</href>
+	</resource>
+	<resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/modernizr.custom.js</href>
+	</resource>
+	<!-- 
+	<resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/jquery.min.js</href>
+	</resource>
+    <resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/bootstrap.min.js</href>
+	</resource>
+     <resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/classie.js</href>
+	</resource>
+	 <resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/TweenMax.min.js</href>
+	</resource>
+	 <resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/index.js</href>
+	</resource>
+	 <resource>
+     <content-type>application/x-javascript</content-type>
+     <href>web/js/index2.js</href>
+	</resource>
+	-->
+	<!--
+		Use this pattern to define property name/value pairs for controls
+	-->
+	<!--
+	<control>
+		<name>[Control Name]</name>
+		<property>
+			<name>[property Name]</name>
+			<value>[property Value]</value>
+		</property>
+	</control>
+	-->
+	<control>
+  <name>ViewRoot</name>
+  <property>
+    <name>pageIcon</name>
+    <value>/favicon.ico</value>
+  </property>
+</control>
+</theme>

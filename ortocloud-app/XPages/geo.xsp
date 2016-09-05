@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:script src="/geoloc.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<xp:button value="Label" id="button1">
+		
+	<xp:eventHandler event="onclick"  submit="false" refreshMode="norefresh">
+		<xp:this.script>
+			<xp:executeClientScript>
+				<xp:this.script><![CDATA[//alert('pre');
+var l=getGeoLocation();
+
+//alert("post call: "+geolocation.lat+" "+geolocation.lon);
+//alert('post');]]></xp:this.script>
+			</xp:executeClientScript>
+		</xp:this.script></xp:eventHandler></xp:button>
+	<xe:jsonRpcService id="geoRPC" serviceName="geoRPC">
+		<xe:this.methods>
+			<xe:remoteMethod name="setLatLon">
+				<xe:this.arguments>
+					<xe:remoteMethodArg name="lat" type="number"></xe:remoteMethodArg>
+					<xe:remoteMethodArg name="lon" type="number"></xe:remoteMethodArg>
+				</xe:this.arguments>
+				<xe:this.script><![CDATA[sessionScope.geoPos={"lat":lat,"lon":lon}]]></xe:this.script>
+			</xe:remoteMethod>
+		</xe:this.methods>
+	</xe:jsonRpcService>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField1" value="#{javascript:(sessionScope.geoPos==null)?'not set':sessionScope.geoPos.lat+' '+sessionScope.geoPos.lon}"></xp:text>
+	<xp:br></xp:br>
+	<xc:ccDebugToolbar defaultCollapsed="false" collapseTo="left"></xc:ccDebugToolbar>
+</xp:view>

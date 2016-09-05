@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			databaseName="#{javascript:findDatabaseName()}" formName="mygarden"
+			computeWithForm="onsave" action="editDocument"
+			ignoreRequestParams="true">
+			<xp:this.documentId><![CDATA[#{javascript:context.getUrlParameter("unid")}]]></xp:this.documentId>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:try {
+ /*importPackage(com.grasso.bluemix.watson.weather);
+ var meteo=new com.grasso.bluemix.watson.weather.meteo();
+ var js=meteo.GetGeoObservations( getCurrentLatAsString(),getCurrentLonAsString());
+ var co=fromJson(js);
+ sessionScope.currentObservation=co;*/
+ createmeteoScope(getCurrentLatAsString(),getCurrentLonAsString());
+ 
+ if (param.get("unid")!=""){
+		if (sessionScope.myGarden==null){
+			/*load from backend*/
+			sessionScope.myGarden=fromJson(document1.getItemValueString("json"));
+		} else {
+		  if (sessionScope.myGarden.backend.universalid!=param.get("unid")){
+		    sessionScope.myGarden=fromJson(document1.getItemValueString("json"));
+		  }   
+		 
+		}
+	}
+}
+catch(e)
+ {
+  _dump(e);
+
+ }}]]></xp:this.beforePageLoad>
+	<xp:this.resources>
+		<xp:script src="/utility.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:this.afterPageLoad><![CDATA[#{javascript:/*check if meteo is in error show dialogbox*/
+if (viewScope.meteook==false){
+ view.postScript("loadWaitErroMeteo('"+viewScope.meteoerrormex+"');")
+}}]]></xp:this.afterPageLoad>
+	
+	<xc:geoLocXAgent></xc:geoLocXAgent>
+	<xc:layout hideSidebar="true"
+		loaded="${javascript:return (checkstatuswether())}">
+
+		<xp:this.facets>
+			<xp:panel xp:key="facetNavBarBrand">ortocloud</xp:panel>
+			<xp:panel xp:key="facetMiddle">
+				<xp:panel>
+				  <xp:div id="ortoContent" >
+				  	<xc:section styleClass="currentCondition">
+				  		<xc:this.title><![CDATA[#{javascript:try {
+		return "Weather in "+sessionScope.currentObservation.observation.obs_name;
+	}
+	catch(e)
+	{
+		return "Current Weather Conditions";
+	}
+	}]]></xc:this.title>
+				  		<xp:this.facets>
+				  			<xp:panel xp:key="facet_1">
+				  				<xp:text escape="true"
+				  					id="computedField1"
+				  					value="#{javascript:(sessionScope.geoPos==null)?'not set':sessionScope.geoPos.lat+' '+sessionScope.geoPos.lon}">
+				  				</xp:text>
+				  				<xc:bmWeatherObservation
+				  					icon_code="#{javascript:sessionScope.currentObservation.observation.wx_icon}"
+				  					obs_name="#{javascript:sessionScope.currentObservation.observation.obs_name}"
+				  					pressure="#{javascript:sessionScope.currentObservation.observation.pressure}"
+				  					temp="#{javascript:sessionScope.currentObservation.observation.temp}"
+				  					wdir="#{javascript:sessionScope.currentObservation.observation.wdir}"
+				  					wdir_card="#{javascript:sessionScope.currentObservation.observation.wdir_cardinal}"
+				  					loaded="${javascript:sessionScope.currentObservation!=null}">
+				  				</xc:bmWeatherObservation>
+				  			</xp:panel>
+				  		</xp:this.facets>
+				  	</xc:section>
+
+				  	<a id="myGarden" name="myGarden" />
+				  	<xc:section styleClass="mygarden"
+				  		id="sectionGarden">
+				  		<xc:this.title><![CDATA[#{javascript:var b='my Garden';
+	try {
+		if (sessionScope.myGarden.name==null) { return b} else { return sessionScope.myGarden.name }
+	}
+	catch(e)
+	{
+		return b
+	}}]]></xc:this.title>
+				  		<xp:this.facets>
+				  			<xc:aGarden xp:key="facet_1"></xc:aGarden>
+				  		</xp:this.facets>
+				  	</xc:section>
+
+				  	<xc:section styleClass="forecast"
+				  		title="Weather Forecast">
+				  		<xp:this.facets>
+				  			<xc:bmWeatherForecast
+				  				latitude="#{javascript:(sessionScope.geoPos==null)?'44.20':(sessionScope.geoPos.lat).toString()}"
+				  				longitude="#{javascript:(sessionScope.geoPos==null)?'8.20':(sessionScope.geoPos.lon).toString()}"
+				  				xp:key="facet_1">
+				  			</xc:bmWeatherForecast>
+				  		</xp:this.facets>
+				  	</xc:section>
+				  </xp:div>
+				  <xc:section styleClass="footer" title="">
+						<xp:this.facets>
+							<xp:panel xp:key="facet_1" >
+								<xc:footerContent />
+							</xp:panel>
+						</xp:this.facets>
+					</xc:section>
+
+				</xp:panel>
+				<xc:addVegetables></xc:addVegetables>
+			</xp:panel>
+				
+		</xp:this.facets>
+	</xc:layout>
+	<xc:loadingModal></xc:loadingModal>
+	<xc:modaldialoggeoerror
+		message="#{javascript:viewScope.meteoerrormex}">
+	</xc:modaldialoggeoerror>
+
+	
+
+</xp:view>

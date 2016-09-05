@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+	<!--  <div class="row">
+	  <div class="col-md-4">
+	  	<p><span class=".lead">ortocloud</span> your kitchen garden assistant in cloud</p>
+	  </div>
+	  <div class="col-md-4">
+	  </div>
+	  <div class="col-md-4">be green<br/>
+	  </div>
+	</div> -->
+	<div class="row">
+	  <div class="col-md-4">
+	  	  <h3>ortocloud</h3>
+	  	  <p>by</p>	
+		  <p><h4>Giuseppe Grasso</h4></p>
+		  <p>and</p>	
+		  <p><h4>Daniele Grillo</h4></p>
+		  <hr/>
+		  <p><span class=".lead">ortocloud</span>: your <em>&#160;in cloud&#160;</em> kitchen garden assistant</p>
+		  <p>made Italy with love, XPages and Bluemix </p>
+		  <hr/>
+		  <a href="https://www.dominopoint.it/" target="_blank"><xp:image url="/dominopoint.png" id="image4"></xp:image></a>
+	  </div>
+	  <div class="col-md-4">
+	  
+	  </div>
+	  <div class="col-md-4">
+	    <h4>IBM Collaboration Solutions<br/>Worldwide Dev Challange</h4>
+	    <div class="logo">
+		  	<a href="http://www.ibm.com/cloud-computing/bluemix/" target="_blank"><xp:image url="/bluemixlogo.png" id="image1"></xp:image></a>&#160;
+		  	<a href="http://www.ibm.com/" target="_blank"><xp:image url="/ibmlogo.png" id="image2"></xp:image></a>&#160;
+		  	<a href="https://openntf.org/" target="_blank"><xp:image url="/openntflogo.png" id="image3"></xp:image></a>&#160;
+		</div>  	
+	  </div>
+	</div>
+	<div class="row">
+	 <div class="col-md-12">
+	 <h6>license</h6>
+	 <p>this software is licensed under Apache v2 license http://www.apache.org/licenses/LICENSE-2.0</p>
+	 <p></p>
+	 <p>images are  public domain or  Creative Commons Attribution-Share Alike, sourced from:
+	 <ul>
+	 	<li>https://www.flickr.com/photos/4nitsirk/3834743256 </li>
+		<li>https://commons.wikimedia.org/wiki/File:Isola_Bella,_belvedere.jpg </li>
+
+		<li>https://commons.wikimedia.org/wiki/File:ISS-44_Night_view_of_the_western_United_States.jpg </li>
+		<li>https://commons.wikimedia.org/wiki/File:IBM_Watson.PNG </li>
+		<li>https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg </li>
+		<li>http://www.publicdomainpictures.net/pictures/30000/velka/blue-sky-with-small-clouds.jpg</li> 
+		<li>http://www.publicdomainpictures.net/pictures/10000/nahled/starry-night-871287410454UmtH.jpg</li>
+	 </ul>
+	 </p>
+	 </div>
+	</div>
+	
+	</xp:view>

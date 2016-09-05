@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xp:text escape="true" id="computedField1">
+		<xp:this.value><![CDATA[#{javascript:"forecast for "+compositeData.latitude+" "+compositeData.longitude}]]></xp:this.value>
+	</xp:text>
+	<xp:repeat id="repeat1" rows="30" var="dsForecast"
+		repeatControls="true">
+		<xp:this.value><![CDATA[#{javascript:try {
+/*importPackage(com.grasso.bluemix.watson.weather);
+var meteo= new com.grasso.bluemix.watson.weather.meteo();
+var ms=meteo.GetGeoForecastDaily10day(compositeData.latitude,compositeData.longitude);
+var meteodata=fromJson(ms)*/
+
+var meteodata=sessionScope.forecastObservation;
+
+var data=[]
+//i=1 we skip today // bluemix weather  api will skip the day part after 11.59 AM
+for(var i = 1; i < meteodata.forecasts.length; i++){
+	var f=meteodata.forecasts[i];
+	//_dump("i "+i+toJson(f))
+	//_dump("i "+i+f.dow);
+	data.push({
+		"dow":f.dow,
+		"icon_code_day":f.day.icon_code,
+		"icon_code_night":f.night.icon_code,
+		"narrative":f.day.narrative,
+		"narrative_day":f.day.narrative,
+		"narrative_night":f.night.narrative,
+		"daypart_name":f.day.daypart_name,
+		"max_temp":f.max_temp,
+		"min_temp":f.min_temp
+		})
+}
+
+return data
+
+} catch (e) { _dump("error: "+e )}}]]></xp:this.value>
+
+		<xc:bmWeatherDayNight dow="#{javascript:dsForecast.dow}"
+			icon_code_day="#{javascript:dsForecast.icon_code_day}"
+			narrative="#{dsForecast.narrative}"
+			daypart_name="#{javascript:dsForecast.daypart_name}"
+			narrative_day="#{javascript:dsForecast.narrative_day}"
+			narrative_night="#{javascript:dsForecast.narrative_night}">
+			<xc:this.icon_code_night><![CDATA[#{javascript:dsForecast.icon_code_night
+}]]></xc:this.icon_code_night>
+			<xc:this.max_temp><![CDATA[#{javascript:dsForecast.max_temp
+}]]></xc:this.max_temp>
+			<xc:this.min_temp><![CDATA[#{javascript:dsForecast.min_temp
+}]]></xc:this.min_temp>
+		</xc:bmWeatherDayNight>
+
+
+
+	</xp:repeat>
+</xp:view>

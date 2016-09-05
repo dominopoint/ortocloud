@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<!-- Modal transparent -->
+	<div class="modal modal-transparent fade" id="modal-transparent"
+		tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close"
+						data-dismiss="modal">
+						<span aria-hidden="true"></span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						Add Vegetables
+					</h4>
+				</div>
+				<div class="modal-body">
+					<xp:repeat id="repeat1" rows="30" var="veg">
+		<xp:this.value><![CDATA[#{javascript:  
+//return biolist;
+
+var b=vegScoreAsObject( getCurrentLatAsString(), getCurrentLonAsString() );
+function bioCompareDesc(a,b) {
+  if (a.score > b.score)
+    return -1;
+  if (a.score < b.score)
+    return 1;
+  return 0;
+}
+
+return b.biolist.sort(bioCompareDesc)     }]]></xp:this.value>
+
+
+
+		<xp:panel>
+
+			<xc:vegSpec description="#{javascript:veg.description}"
+				name="#{javascript:veg.name+' '+veg.score}"
+				image="#{javascript:veg.image}"
+				seed_date="#{javascript:new Date();}"
+				tempMax="#{javascript:veg.tempMax}"
+				tempMin="#{javascript:veg.tempMin}"
+				harvestMax="#{javascript:veg.harvestMax}"
+				harvestMin="#{javascript:veg.harvestMin}">
+				<xp:this.facets>
+					<xp:button id="button1" value="Add to my Garden"
+						xp:key="facet_1" styleClass="btn btn-primary btn-lg btn-block"
+						title="click to add this vegetable to your garden">
+						<i class="glyphicon glyphicon-ok"
+							aria-hidden="true">
+						</i>
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="partial" immediate="true">
+							<xp:this.script><![CDATA[a=confirm("do you want to add this vegetables to your garden?")]]></xp:this.script>
+
+
+							<xp:this.action>
+
+								<xp:actionGroup>
+
+
+
+
+									<xp:executeScript
+										script="#{javascript:addVegetablesMyGarden(veg,document1)}">
+
+									</xp:executeScript>
+									<xp:saveDocument var="document1"></xp:saveDocument>
+
+
+
+
+
+
+								</xp:actionGroup>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:this.facets>
+			</xc:vegSpec>
+		</xp:panel>
+	</xp:repeat>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default"
+						data-dismiss="modal">
+						Close
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</xp:view>

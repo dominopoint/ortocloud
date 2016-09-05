@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<span class="rating" title="#{javascript:parseInt(compositeData.score)+'/100'}">
+	
+	<xp:text escape="false" id="computedField1">
+		<xp:this.value><![CDATA[#{javascript:var ifull="<i class='glyphicon glyphicon-star' aria-hidden='true'></i>"
+var iempty="<i class='glyphicon glyphicon-star-empty' aria-hidden='true'></i>"
+
+var sc=Math.round( parseFloat( compositeData.score)/20);
+
+var s=''  ;
+
+for (var i = 0; i < 5; i++) {
+   //s+= (i<sc)?"*":"-"
+   s+= (i<sc)?ifull:iempty
+   // more statements
+}
+
+return s}]]></xp:this.value>
+	</xp:text>
+	</span>
+	</xp:view>

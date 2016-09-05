@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:script src="/jsonutils.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:panel id="panelRepeat">
+		<xp:repeat id="repeat1" rows="30" var="gVeg" indexVar="idx"
+			repeatControls="false">
+			<xp:this.value><![CDATA[#{javascript:var biolist=[ 
+	{ name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'https://c1.staticflickr.com/9/8156/7376268248_0ac8a046fe_b.jpg',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'},
+	  {name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'<imageurl>',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'},
+	{ name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'https://c1.staticflickr.com/9/8156/7376268248_0ac8a046fe_b.jpg',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'},
+	{ name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'<imageurl>',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'},
+	{ name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'https://c1.staticflickr.com/9/8156/7376268248_0ac8a046fe_b.jpg',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'},
+	{ name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'https://c1.staticflickr.com/9/8156/7376268248_0ac8a046fe_b.jpg',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'},
+	{ name:'artichoke',
+	  id:'<universalid>',
+	  maxtemp:20,mintemp:10,
+	  minhavest:30,
+	  maxharvest:160,
+	  description:'<text>',
+	  image:'https://c1.staticflickr.com/9/8156/7376268248_0ac8a046fe_b.jpg',
+	  score:100,
+	  seeded:'2016-06-21T14:25:43.511Z'} ]
+	  
+//return biolist;
+
+
+
+//var b=vegScoreAsObject( getCurrentLatAsString(), getCurrentLonAsString() );
+var b=(sessionScope.myGarden)==null?{biolist:[]}:sessionScope.myGarden//vegScoreAsObject( getCurrentLatAsString(), getCurrentLonAsString() );
+function bioCompareDesc(a,b) {
+  if (a.score > b.score)
+    return -1;
+  if (a.score < b.score)
+    return 1;
+  return 0;
+}
+
+return b.biolist.sort(bioCompareDesc)     }]]></xp:this.value>
+			<xp:panel>
+				<!-- <xc:vegSeeded description="#{javascript:.description}"
+					name="#{javascript:veg.name+' '+veg.score}"
+					image="#{javascript:veg.image}"
+					seed_date="#{javascript:veg.seeded">
+					</xc:vegSeeded> -->
+				<xc:vegSeeded loaded="true"
+					description="#{javascript:gVeg.description}"
+					name="#{javascript:gVeg.name}" image="#{javascript:gVeg.image}"
+					seed_date="#{javascript:gVeg.seeded==null?new Date():jsonToDate(gVeg.seeded)}"
+					tempMin="#{javascript:gVeg.tempMin}"
+					harvestMax="#{javascript:gVeg.harvestMax}"
+					harvestMin="#{javascript:gVeg.harvestMin}"
+					tempMax="#{javascript:gVeg.tempMax}"
+					score="#{javascript:gVeg.score}">
+					<xp:this.facets>
+						<xp:button value="Remove from my garden"
+							id="button2" xp:key="facet_1" styleClass="btn btn-warning "
+							title="click to remove this vegetable from your garden">
+							<i class="glyphicon glyphicon-remove"
+								aria-hidden="true">
+							</i>
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="partial" disableValidators="true"
+								refreshId="panelRepeat">
+								<xp:this.action><![CDATA[#{javascript:sessionScope.myGarden.biolist=sessionScope.myGarden.biolist.splice(idx,1);
+document1.replaceItemValue("json",toJson(sessionScope.myGarden))
+document1.save();}]]></xp:this.action>
+								<xp:this.onComplete><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("oncmplete event")]]></xp:this.onComplete>
+								<xp:this.onError><![CDATA[$('#myPleaseWait').modal('hide');
+console.log("onerror event")]]></xp:this.onError>
+								<xp:this.onStart><![CDATA[$('#myPleaseWait').modal('show');
+console.log("onstart event")]]></xp:this.onStart>
+							</xp:eventHandler>
+						</xp:button>
+					</xp:this.facets>
+
+
+				</xc:vegSeeded>
+
+			</xp:panel>
+		</xp:repeat>
+	</xp:panel>
+	<!-- <xp:button value="Add Vegetable" id="button1">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:noteid=context.getUrlParameter("unid");
+		parameter=noteid==""?"":"&unid="+noteid;
+		context.redirectToPage("/test_composegarden.xsp?open"+parameter)}]]></xp:this.action>
+		</xp:eventHandler></xp:button>  -->
+	<!-- <xp:button value="Add Vegetable" id="button1">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:noteid=context.getUrlParameter("unid");
+parameter=noteid==""?"":"&unid="+noteid;
+context.redirectToPage("/test_composegarden.xsp?open"+parameter)}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>  -->
+	<xp:button value="Add new crops" id="button3"
+		styleClass="btn btn-primary btn-lg AddVegBtn">
+		<xp:this.attrs>
+			<xp:attr name="data-toggle" value="modal"></xp:attr>
+			<xp:attr name="data-target" value="#modal-transparent"></xp:attr>
+		</xp:this.attrs>
+		<i class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></i>
+	</xp:button></xp:view>
