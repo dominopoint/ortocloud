@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="306" sequence="1" unid="4DDFE2A6CA0986B5C125802200581141">
+<noteinfo noteid="322" sequence="1" unid="4DDFE2A6CA0986B5C125802200581141">
 <created><datetime dst="true">20160902T180155,85+02</datetime></created>
-<modified><datetime dst="true">20160905T120037,59+02</datetime></modified>
+<modified><datetime dst="true">20160905T122225,05+02</datetime></modified>
 <revised><datetime dst="true">20160902T180155,85+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160905T120037,58+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160905T120037,58+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20160905T122225,04+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T122225,04+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Giuseppe Grasso/O=grydan</name></updatedby>
 <wassignedby><name>CN=Giuseppe Grasso/O=grydan</name></wassignedby>
 <item name="$TITLE"><text>openntflogo.png</text></item>

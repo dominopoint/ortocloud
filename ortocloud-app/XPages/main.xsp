@@ -65,7 +65,7 @@ if (viewScope.meteook==false){
 				  			<xp:panel xp:key="facet_1">
 				  				<xp:text escape="true"
 				  					id="computedField1"
-				  					value="#{javascript:(sessionScope.geoPos==null)?'not set':sessionScope.geoPos.lat+' '+sessionScope.geoPos.lon}">
+				  					value="#{javascript:(sessionScope.geoPos==null)?'not set':sessionScope.geoPos.lat+' '+sessionScope.geoPos.lon}" rendered="false">
 				  				</xp:text>
 				  				<xc:bmWeatherObservation
 				  					icon_code="#{javascript:sessionScope.currentObservation.observation.wx_icon}"
@@ -122,10 +122,11 @@ if (viewScope.meteook==false){
 		</xp:this.facets>
 	</xc:layout>
 	<xc:loadingModal></xc:loadingModal>
+	
 	<xc:modaldialoggeoerror
 		message="#{javascript:viewScope.meteoerrormex}">
 	</xc:modaldialoggeoerror>
-
+<xc:analytics></xc:analytics>
 	
 
 </xp:view>

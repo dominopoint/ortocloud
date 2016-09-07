@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="54e" sequence="3" unid="26DD583FFC5FECEFC125801F004A9033">
+<noteinfo noteid="56a" sequence="3" unid="26DD583FFC5FECEFC125801F004A9033">
 <created><datetime dst="true">20160830T153425,79+02</datetime></created>
-<modified><datetime dst="true">20160905T120105,95+02</datetime></modified>
+<modified><datetime dst="true">20160905T122241,16+02</datetime></modified>
 <revised><datetime dst="true">20160830T153436,03+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160905T120105,91+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160905T120105,91+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20160905T122241,15+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T122241,15+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Giuseppe Grasso/O=grydan</name></updatedby>
 <wassignedby><name>CN=Giuseppe Grasso/O=grydan</name></wassignedby>
 <item name="$Flags"><text>34CiQ</text></item>

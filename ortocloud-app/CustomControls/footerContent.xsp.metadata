@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="3da" sequence="80" unid="CC420329BF046069C12580220055DC1A">
+<noteinfo noteid="3f6" sequence="86" unid="CC420329BF046069C12580220055DC1A">
 <created><datetime dst="true">20160902T173749,06+02</datetime></created>
-<modified><datetime dst="true">20160905T120041,49+02</datetime></modified>
-<revised><datetime dst="true">20160905T112954,14+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160905T120041,48+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160905T120041,48+02</datetime></addedtofile></noteinfo>
+<modified><datetime dst="true">20160905T141231,34+02</datetime></modified>
+<revised><datetime dst="true">20160905T141231,33+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160905T141231,33+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T122226,10+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name></updatedby>
 <wassignedby><name>CN=Giuseppe Grasso/O=grydan</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
@@ -14,9 +14,9 @@
 
 
 
-<item name="$DesignerVersion"><text>8.5</text></item>
 
 
 <item name="$FileNames" sign="true"><text>footerContent.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
 
 </note>

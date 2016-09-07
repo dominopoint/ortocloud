@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="35e" sequence="159" unid="A9FC962C82EE8F12C125801B0050EACF">
+<noteinfo noteid="37a" sequence="169" unid="A9FC962C82EE8F12C125801B0050EACF">
 <created><datetime dst="true">20160826T164349,91+02</datetime></created>
-<modified><datetime dst="true">20160905T120038,54+02</datetime></modified>
-<revised><datetime dst="true">20160905T093714,52+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160905T120038,53+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160905T120038,53+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name></updatedby>
-<wassignedby><name>CN=Daniele Grillo/O=grydan</name></wassignedby>
+<modified><datetime dst="true">20160905T141135,96+02</datetime></modified>
+<revised><datetime dst="true">20160905T141135,92+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160905T141135,92+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T122225,48+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name></updatedby>
+<wassignedby><name>CN=Giuseppe Grasso/O=grydan</name></wassignedby>
 <item name="$TITLE"><text>custom.css</text></item>
 <item name="$MimeType"><text>text/css</text></item>
 <item name="$Flags"><text>34C=Q</text></item>

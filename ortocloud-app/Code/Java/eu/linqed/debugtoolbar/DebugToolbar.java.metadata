@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="53a" sequence="2" unid="A66B70AD6062D687C1258018003C20C7">
+<noteinfo noteid="556" sequence="2" unid="A66B70AD6062D687C1258018003C20C7">
 <created><datetime dst="true">20160823T125645,51+02</datetime></created>
-<modified><datetime dst="true">20160905T120103,87+02</datetime></modified>
+<modified><datetime dst="true">20160905T122240,27+02</datetime></modified>
 <revised><datetime dst="true">20160823T125645,93+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160905T120103,86+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160905T120103,86+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20160905T122240,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T122240,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Mark Leusink/O=LinQed</name><name>CN=Mark Leusink/O=CITC</name><name>CN=Mark Leusink/O=LinQed</name><name>CN=Domino Administrator/O=LinQed</name><name>CN=Mark Leusink/O=LinQed</name><name>CN=Mark Leusink/O=SAXDEV</name><name>CN=Mark Leusink/O=LinQed</name><name>CN=Domino Administrator/O=LinQed</name><name>CN=Mark Leusink/O=LinQed</name><name>CN=Sabrina Cadario/O=Provincia/C=IT</name><name>CN=Admin Admin/O=ASLPavia</name><name>CN=Rosanna Ferrari/O=ASLPavia</name><name>CN=Admin Admin/O=ASLPavia</name><name>CN=Daniele Grillo/O=grydan</name></updatedby>
 <wassignedby><name>CN=Daniele Grillo/O=grydan</name></wassignedby>
 <item name="$Flags"><text>34567Cg~[</text></item>

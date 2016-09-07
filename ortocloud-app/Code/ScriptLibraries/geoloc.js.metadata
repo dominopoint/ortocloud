@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1258025002D9225" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="282" sequence="43" unid="1B46086B6636569BC12580180049628E">
+<noteinfo noteid="29e" sequence="45" unid="1B46086B6636569BC12580180049628E">
 <created><datetime dst="true">20160823T152133,58+02</datetime></created>
-<modified><datetime dst="true">20160905T120036,10+02</datetime></modified>
-<revised><datetime dst="true">20160902T192710,70+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160905T120036,09+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160905T120036,09+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name></updatedby>
-<wassignedby><name>CN=Giuseppe Grasso/O=grydan</name></wassignedby>
+<modified><datetime dst="true">20160905T125501,56+02</datetime></modified>
+<revised><datetime dst="true">20160905T124908,23+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160905T125501,55+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160905T122224,38+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name><name>CN=Giuseppe Grasso/O=grydan</name><name>CN=Daniele Grillo/O=grydan</name></updatedby>
+<wassignedby><name>CN=Daniele Grillo/O=grydan</name></wassignedby>
 <item name="$TITLE" sign="true"><text>geoloc</text></item>
 <item name="$Flags"><text>h534Q</text></item>
 <item name="$PublicAccess" sign="true"><text>1</text></item>
