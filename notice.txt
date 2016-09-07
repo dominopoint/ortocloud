@@ -1,0 +1,14 @@
+OpenNTF ortocloud
+(C)Copyright Giuseppe Grasso & Daniele Grillo
+
+This product includes software contributed to OpenNTF Alliance (http://www.OpenNTF.org/)
+
+This product is licensed under the terms of the Apache 2.0 license.
+
+The project contains the following 3rd party code:
+
+1. The product contains commons-codec-1.10.jar, which is available from http://commons.apache.org/proper/commons-codec/ and which is under the Apache 2.0 license. (common encoders and decoders such as Base64)
+
+2. The product contains gson-2.2.4.jar, which is available from https://github.com/google/gson and which is under the Apache 2.0 license. (A Java serialization/deserialization library that can convert Java Objects into JSON and back.)
+
+3. The product contains XPage Debug Toolbar v3.01, which is available from https://github.com/openntf/debugtoolbar and which is under the Apache 2.0 license. (The XPages Debug Toolbar plugin adds a toolbar to the top of any XPage)
