@@ -16,7 +16,7 @@ The project contains the following 3rd party code:
 4. The product contains ortocloud.theme, derived from https://github.com/OpenNTF/XPagesExtensionLibrary/blob/master/extlib/lwp/product/runtime/eclipse/plugins/com.ibm.xsp.theme.bootstrap/src/com/ibm/xsp/theme/bootstrap/themes/Bootstrap3_flat.theme and which is under the Apache 2.0 license. (Bootstrap 3 flat theme)
 
 
-The project contains the following images :
+The project contains the following images:
 
 * https://www.flickr.com/photos/4nitsirk/3834743256 licensed under Creative Commons Attribution-ShareAlike 2.0 Generic license
 * https://commons.wikimedia.org/wiki/File:Isola_Bella,_belvedere.jpg licensed under Creative Commons Attribution-Share Alike 3.0 Unported
@@ -25,3 +25,6 @@ The project contains the following images :
 * https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg in the public domain
 * http://www.publicdomainpictures.net/pictures/30000/velka/blue-sky-with-small-clouds.jpg in the public domain
 * http://www.publicdomainpictures.net/pictures/10000/nahled/starry-night-871287410454UmtH.jpg in the public domain
+
+
+The project may use Google Analytics, subject to the Google Analytics Terms of Service - https://www.google.com/analytics/terms/us.html
